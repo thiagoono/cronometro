@@ -15,7 +15,7 @@
 <body>
     <h1>Cronômetro</h1>
 
-    <article id="cronometer">
+    <article id="chronometer">
         <section id="time-passed">00:00<span id="milisseconds">.00</span></section>
         <section id="buttons">
             <button type="button" id="start-pause-button">Iniciar</button>
@@ -27,19 +27,21 @@
     <section id="times-saved">
         <h2>Tempos Salvos</h2>
         
-        <label for="filters">Filtrar por</label>
-        <select name="filters" id="filters">
-            <option value="most-recent">Mais recente</option>
-            <option value="fastest">Mais curto</option>
-            <option value="slowest">Mais longo</option>
-        </select>
-
-        <ol type="1" id="times-list">
-            <li>12:25</li>
-            <li>07:54</li>
-            <li>56:20</li>
-            <li>34:09</li>
-        </ol>
+        <div>
+            <label for="filters">Filtrar por</label>
+            <select name="filters" id="filters">
+                <option value="most-recent">Mais recente</option>
+                <option value="fastest">Mais curto</option>
+                <option value="slowest">Mais longo</option>
+            </select>
+        
+            <ol type="1" id="times-list">
+                <li class="time">12:25</li>
+                <li class="time">07:54</li>
+                <li class="time">56:20</li>
+                <li class="time">34:09</li>
+            </ol>
+        </div>
     </section>
 </body>
 </html>
