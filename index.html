@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+</head>
+
+<body>
+    <h1>Cronômetro</h1>
+
+    <article id="cronometer">
+        <section id="time-passed">00:00</section>
+        <section id="buttons">
+            <button type="button" id="start-pause-button">Iniciar</button>
+            <button type="button" id="reset-button">Reiniciar</button>
+            <button type="button" id="save-time">Salvar tempo</button>
+        </section>
+    </article>
+
+    <section id="times-saved">
+        <h2>Tempos Salvos</h2>
+        
+        <label for="filters">Filtrar por</label>
+        <select name="filters" id="filters">
+            <option value="most-recent">Mais recente</option>
+            <option value="fastest">Mais curto</option>
+            <option value="slowest">Mais longo</option>
+        </select>
+
+        <ol type="1" id="times-list">
+            <li>12:25</li>
+            <li>07:54</li>
+            <li>56:20</li>
+            <li>34:09</li>
+        </ol>
+    </section>
+</body>
+</html>
