@@ -16,10 +16,10 @@
     <h1>Cronômetro</h1>
 
     <article id="chronometer">
-        <section id="time-passed">00:00<span id="milisseconds">.00</span></section>
+        <section id="time-passed"><span id="minutes">00</span>:<span id="seconds">00</span><span id="milisseconds">.00</span></section>
         <section id="buttons">
-            <button type="button" id="start-pause-button">Iniciar</button>
-            <button type="button" id="reset-button">Reiniciar</button>
+            <button type="button" id="start-pause-button" class="paused">Iniciar</button>
+            <button type="button" id="reset-button" disabled>Reiniciar</button>
             <button type="button" id="save-time">Salvar tempo</button>
         </section>
     </article>
@@ -30,9 +30,9 @@
         <div>
             <label for="filters">Filtrar por</label>
             <select name="filters" id="filters">
-                <option value="most-recent">Mais recente</option>
-                <option value="fastest">Mais curto</option>
-                <option value="slowest">Mais longo</option>
+                <option value="most-recent" class="filter">Mais recente</option>
+                <option value="fastest" class="filter">Mais curto</option>
+                <option value="slowest" class="filter">Mais longo</option>
             </select>
         
             <ol type="1" id="times-list">
@@ -43,5 +43,7 @@
             </ol>
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

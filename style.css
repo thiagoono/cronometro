@@ -25,9 +25,13 @@ h1 {
 }
 
 #time-passed {
-    font-family: "VT323";
     font-size: 10em;
     margin-bottom: 20px;
+    font-family: "VT323";
+}
+
+#minutes, #seconds {
+    font-family: "VT323";
 }
 
 #milisseconds {
@@ -44,6 +48,32 @@ button {
     padding: 10px 20px;
     margin: 0px 5px;
     border-radius: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.paused {
+    background-color: greenyellow;
+    padding: 10px 24px;
+}
+
+.started {
+    background-color: rgb(255, 77, 0);
+}
+
+#reset-button {
+    background-color: orange;
+}
+
+#reset-button:disabled {
+    color: #000;
+    background-color: #fff;
+    opacity: 0.6;
+    cursor:not-allowed
+}
+
+#save-time {
+    background-color: #fff;
 }
 
 #times-saved {
