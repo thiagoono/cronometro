@@ -20,7 +20,7 @@
         <section id="buttons">
             <button type="button" id="start-pause-button" class="paused">Iniciar</button>
             <button type="button" id="reset-button" disabled>Reiniciar</button>
-            <button type="button" id="save-time">Salvar tempo</button>
+            <button type="button" id="save-time-button">Salvar tempo</button>
         </section>
     </article>
 
@@ -35,12 +35,9 @@
                 <option value="slowest" class="filter">Mais longo</option>
             </select>
         
-            <ol type="1" id="times-list">
-                <li class="time">12:25</li>
-                <li class="time">07:54</li>
-                <li class="time">56:20</li>
-                <li class="time">34:09</li>
-            </ol>
+            <ol type="1" id="times-list"></ol>
+
+            <p id="no-times">Nenhum tempo registrado</p>
         </div>
     </section>
 

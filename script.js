@@ -60,3 +60,34 @@ document.getElementById("start-pause-button").addEventListener("click", () => {
 document.getElementById("reset-button").addEventListener("click", () => {
     resetTimer();
 })
+
+document.getElementById("save-time-button").addEventListener("click", () => {
+    saveTime();
+})
+
+const times = []
+
+function saveTime() {
+    const now = new Date();
+    times.unshift({
+        currentTime: now,
+        timePassed: time,
+    })
+    updateTimesList();
+    resetTimer();
+}
+
+function updateTimesList() {
+    //sortTimes();
+    document.getElementById("no-times").innerHTML = ""
+    let timesListHTML = "";
+    times.forEach(time => {
+        const minutes = String(parseInt(time.timePassed / 6000))
+        const seconds = String(parseInt(time.timePassed / 100) % 60);
+        const milisseconds = String(time.timePassed % 100);
+
+        timesListHTML += `<li class="time">${minutes.padStart(2, "0")}:${seconds.padStart(2, "0")}<span class="times-list-milisseconds">.${milisseconds.padStart(2, "0")}</span></li>`
+    })
+
+    document.getElementById("times-list").innerHTML = timesListHTML;
+}

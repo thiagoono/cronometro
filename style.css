@@ -104,3 +104,12 @@ li::marker {
     font-size: 1.3em;
     color: rgb(165, 72, 5);
 }
+
+.times-list-milisseconds {
+    font-size: 0.75em;
+}
+
+#no-times {
+    color: red; 
+    margin-top: 20px;
+}
