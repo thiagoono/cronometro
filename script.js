@@ -1,3 +1,4 @@
+// Chronometer
 let time = 0;
 let intervalID;
 
@@ -65,8 +66,14 @@ document.getElementById("save-time-button").addEventListener("click", () => {
     saveTime();
 })
 
-const times = []
+// Times List
+
+const times = JSON.parse(localStorage.getItem("times")) || [];
 let filter = "most-recent"
+
+if (times.length > 0) {
+    updateTimesList();
+}
 
 function saveTime() {
     const now = new Date();
@@ -74,6 +81,7 @@ function saveTime() {
         currentTime: now,
         timePassed: time,
     })
+    localStorage.setItem("times", JSON.stringify(times));
     updateTimesList();
     resetTimer();
 }
@@ -90,7 +98,21 @@ function updateTimesList() {
         timesListHTML += `<li class="time">${minutes.padStart(2, "0")}:${seconds.padStart(2, "0")}<span class="times-list-milisseconds">.${milisseconds.padStart(2, "0")}</span></li>`
     })
 
+    if (times.length == 0) {
+        timesListHTML += `<p id="no-times">Nenhum tempo registrado</p>`
+    } else {
+        timesListHTML += `<button type="button" id="delete-times">Limpar tempos</button>`
+    }
+
     document.getElementById("times-list").innerHTML = timesListHTML;
+
+    if (times.length > 0) {
+        document.getElementById("delete-times").addEventListener("click", () => {
+            times.length = 0;
+            localStorage.setItem("times", JSON.stringify(times));
+            updateTimesList();
+        })
+    }
 }
 
 const selectFilterInput = document.getElementById("filters");

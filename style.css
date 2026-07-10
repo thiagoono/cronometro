@@ -113,3 +113,12 @@ li::marker {
     color: red; 
     margin-top: 20px;
 }
+
+#delete-times {
+    background-color: rgb(178, 0, 0);
+    color: #fff;
+    font-size: 0.9em;
+    padding: 8px 10px;
+    display: block;
+    margin: 40px auto;
+}
