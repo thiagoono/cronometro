@@ -217,3 +217,20 @@ function getStronger(index1, index2) {
             break;
     }
 }
+
+document.addEventListener("keyup", event => {
+    console.log(event.key)
+    switch (event.key) {
+        case " ":
+            startPause();
+            break;
+        
+        case "Enter":
+            saveTime();
+            break;
+        
+        case "r":
+            resetTimer();
+            break;
+    }
+})
